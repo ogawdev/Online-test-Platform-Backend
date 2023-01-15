@@ -1,5 +1,4 @@
 const Category = require("../modals/categoryModal");
-const User = require("../modals/UserModal");
 
 
 const addNewCategory = async (req, res) => {
@@ -25,8 +24,6 @@ const addNewCategory = async (req, res) => {
 const getCategories = async (req, res) => {
     try {
         let categories = await Category.find({});
-        console.log(categories);
-        console.log('SALOM');
 
         res.json(categories);
     } catch (error) {

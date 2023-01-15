@@ -1,5 +1,4 @@
 const {Router} = require('express');
-const { verifyIsLoggedIn } = require('../middlewares/verifyAuthToken');
 const route = Router();
 
 route.use('/',require("./register"));
