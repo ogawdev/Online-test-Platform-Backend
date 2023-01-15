@@ -1,7 +1,6 @@
-const Category = require("../modals/categoryModal");
+// const Questions = require("../modals/Questions");
+
 const Questions = require("../modals/Questions");
-const { $where } = require("../modals/UserModal");
-const User = require("../modals/UserModal");
 
 
 // let qq = idx == 0 ? val.test1.qiymat : idx == 1 ? val.test2.qiymat : idx == 2 && val.test3.qiymat;

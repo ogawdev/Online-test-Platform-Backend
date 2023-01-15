@@ -1,4 +1,5 @@
-const Category = require("../modals/categoryModal");
+
+const categoryModal = require("../modals/categoryModal");
 
 
 const addNewCategory = async (req, res) => {
@@ -9,7 +10,7 @@ const addNewCategory = async (req, res) => {
             res.json({ error: "Ma`lumotni kiriting" })
         } else {
             const { name } = req.body;
-            let data = await Category.create({
+            let data = await categoryModal.create({
                 name: name.toLowerCase(),
                 createdBy: req.user._id
             });

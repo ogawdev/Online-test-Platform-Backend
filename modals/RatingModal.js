@@ -26,5 +26,5 @@ const userSchema = mongoose.Schema({
     timestamps: true,
 });
 
-const RatingModal = mongoose.model("Rating", userSchema);
-module.exports = RatingModal;
+module.exports = mongoose.model("Rating", userSchema);
+
