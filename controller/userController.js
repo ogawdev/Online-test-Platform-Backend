@@ -1,5 +1,5 @@
 const RatingModal = require("../modals/RatingModal");
-const UserModal = require("../modals/UserModal");
+const User = require("../modals/UserModal");
 // const User = require("../modals/UserModal");
 const generateAuthToken = require("../utils/generateAuthTokem");
 const { comparePasswords, hashPassword } = require("../utils/hashedPassword");
@@ -12,7 +12,7 @@ const registerUser = async (req, res) => {
       return res.json({ error: "All inputs are required" });
     }
 
-    const userExists = await UserModal.findOne({ login });
+    const userExists = await User.findOne({ login });
     if (userExists) {
       return res.json({ error: "Bunday foydalanuvchi allaqachon mavjud" });
     } else {

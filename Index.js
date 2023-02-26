@@ -1,5 +1,5 @@
 const express = require('express');
-const mongoose =require('mongoose');
+const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
 const app = express();
@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.use('/api',require('./routes/server'));
 
-mongoose.connect(process.env.MONGO_URI_C,()=>{
+mongoose.connect(process.env.MONGO_URI,()=>{
     console.log('DB connected =>', process.env.MONGO_URI_C);
 })
 
